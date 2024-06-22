@@ -2,6 +2,8 @@ require_relative "boot"
 
 require "rails/all"
 
+require './lib/api_version'
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
