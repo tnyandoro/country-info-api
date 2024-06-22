@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :country do
-    name { "MyString" }
-    currency { "MyString" }
-    alpha_2_code { "MyString" }
-    alpha_3_code { "MyString" }
+    name { "Zimbabwe" }
+    currency { "USD" }
+    alpha_2_code { "ZW" }
+    alpha_3_code { "AZW" }
   end
 end
