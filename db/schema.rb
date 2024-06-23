@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_22_191849) do
     t.string "alpha_3_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "status"
+    t.string "status", default: "active"
   end
 
 end
