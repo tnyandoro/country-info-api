@@ -3,6 +3,7 @@ FactoryBot.define do
     name { "Zimbabwe" }
     currency { "USD" }
     alpha_2_code { "ZW" }
-    alpha_3_code { "AZW" }
+    alpha_3_code { "ZWE" }
+    status { 'active' }
   end
 end
