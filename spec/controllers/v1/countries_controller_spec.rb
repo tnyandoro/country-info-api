@@ -2,10 +2,12 @@ require 'rails_helper'
 
 RSpec.describe V1::CountriesController, type: :controller do
 
-  describe "GET #create" do
+  render_views
+
+  describe "POST #create" do
     it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
+      post :create, params: { country: { name: 'Test Country', currency: 'TST', alpha_2_code: 'TC', alpha_3_code: 'TCO', status: 'active' } }
+      expect(response).to have_http_status(:created)
     end
   end
 
@@ -17,9 +19,20 @@ RSpec.describe V1::CountriesController, type: :controller do
   end
 
   describe "GET #show" do
+    let!(:country) { Country.create(name: 'Test Country', currency: 'TST', alpha_2_code: 'TC', alpha_3_code: 'TCO', status: 'active') }
+
     it "returns http success" do
-      get :show
+      get :show, params: { code: 'TC' }
       expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "DELETE #delete" do
+    let!(:country) { Country.create(name: 'Test Country', currency: 'TST', alpha_2_code: 'TC', alpha_3_code: 'TCO', status: 'active') }
+
+    it "returns http success" do
+      delete :delete, params: { id: country.id }
+      expect(response).to have_http_status(:ok)
     end
   end
 

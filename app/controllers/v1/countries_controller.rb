@@ -1,7 +1,6 @@
 module V1
   class CountriesController < ApplicationController
     def create
-      puts(">>>>>>>> HERE <<<<<<<<<<<<<")
       country = Country.new(country_params)
 
       if country.save
