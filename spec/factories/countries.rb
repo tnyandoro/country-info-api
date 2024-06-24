@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :country do
-    name { "Zimbabwe" }
-    currency { "USD" }
-    alpha_2_code { "ZW" }
-    alpha_3_code { "ZWE" }
+    name { 'South Africa' }
+    currency { 'ZAR' }
+    alpha_2_code { 'ZA' }
+    alpha_3_code { 'ZAF' }
     status { 'active' }
   end
 end
