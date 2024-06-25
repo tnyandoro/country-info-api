@@ -42,16 +42,19 @@ You can clone the project on your local machine by running:
 git clone <https://github.com/tnyandoro/country-info-api.git>
 cd the-gentleman-app
 
-
 1. cd country-info-api
 
 2. bundle install
+   
+3. rails seed
+   
+4. rails s
 
-3. **Set Up the Database:**Assuming you have PostgreSQL installed:
+5. **Set Up the Database:**Assuming you have PostgreSQL installed:
 
-    * Open config/database.yml and configure your database credentials (username, password, etc.).
+* Open config/database.yml and configure your database credentials (username, password, etc.).
 
-    * rails db:createrails db:migrate
+* rails db:createrails db:migrate
 
 4. rails serverThis will start the Rails server at <http://localhost:3000>.
 
